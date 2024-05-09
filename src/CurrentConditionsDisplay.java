@@ -4,10 +4,10 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
     private float pressure;
-    private Subject weatherData;
+    // private Subject weatherData;
 
     public CurrentConditionsDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
+        // this.weatherData = weatherData;
         weatherData.registerObsever(this);
     }
 
@@ -21,8 +21,8 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Current conditions: " + temperature + " °C, " + humidity + "% humidity and " + pressure
+        System.out.println("Current conditions: " + temperature + " C grades, " + humidity + "% humidity and " + pressure
                 + " mbar");
-        //throw new UnsupportedOperationException("Unimplemented method 'display'");
+
     }
 }

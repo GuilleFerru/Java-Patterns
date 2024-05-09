@@ -8,13 +8,13 @@ public class WeatherData implements Subject {
     private float pressure;
 
     public WeatherData() {
-        observers = new ArrayList<Observer>();
+        observers = new ArrayList<>();
     }
 
     @Override
     public void registerObsever(Observer o) {
         observers.add(o);
-        //throw new UnsupportedOperationException("Unimplemented method 'registerObsever'");
+        
     }
 
     @Override
@@ -23,7 +23,6 @@ public class WeatherData implements Subject {
         if (i >= 0) {
             observers.remove(i);
         }
-        //throw new UnsupportedOperationException("Unimplemented method 'removeObsever'");
     }
 
     @Override
@@ -31,7 +30,6 @@ public class WeatherData implements Subject {
         for (Observer observer : observers) {
             observer.update(temperature, humidity, pressure);
         }
-        //throw new UnsupportedOperationException("Unimplemented method 'notifyObservers'");
     }
 
     public void measurementsChanged() {
