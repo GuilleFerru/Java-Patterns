@@ -2,7 +2,6 @@ public class Mocha extends CondimentDecorator {
     Beverage beverage;
 
     public Mocha(Beverage beverage) {
-        System.out.println(beverage);
         this.beverage = beverage;
     }
 
@@ -14,9 +13,7 @@ public class Mocha extends CondimentDecorator {
 
     @Override
     public double cost() {
-        System.out.println(beverage.cost() + " mocha");
         return 0.20d + beverage.cost();
-
     }
 
 }

@@ -2,7 +2,6 @@ public class SteamedMilk extends CondimentDecorator {
     Beverage beverage;
 
     public SteamedMilk(Beverage beverage) {
-        System.out.println(beverage);
         this.beverage = beverage;
     }
 
@@ -13,7 +12,6 @@ public class SteamedMilk extends CondimentDecorator {
 
     @Override
     public double cost() {
-        System.out.println(beverage.cost() + " Steamed");
         return .10 + beverage.cost();
     }
 
