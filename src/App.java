@@ -1,12 +1,11 @@
 public class App {
 
-
     public static void main(String[] args) throws Exception {
 
         Beverage beverage = new DarkRoast();
+        beverage.setSize("GRANDE");
         beverage = new Mocha(beverage);
-        beverage = new SteamedMilk(beverage);
-        System.out.println(beverage.getDescription() + " $ " + beverage.cost());
+        System.out.println(beverage.getSize() + " " + beverage.getDescription() + " $ " + beverage.cost());
 
     }
 }
