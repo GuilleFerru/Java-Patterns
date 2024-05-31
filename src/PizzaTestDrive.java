@@ -1,19 +1,15 @@
 public class PizzaTestDrive {
 
     public static void main(String[] args) throws Exception {
-        PizzaStore nyStore = new NYPizzaStore();
-        PizzaStore chicagoStore = new ChicagoPizzaStore();
+        SimplePizzaFactory factory = new SimplePizzaFactory();
         Pizza pizza;
         
-
-        pizza = nyStore.orderPizza("cheese");
+        PizzaStore store = new PizzaStore(factory);
+        pizza = store.orderPizza("cheese");
         System.out.println("Guille ordered a " + pizza.getName() + "\n");
 
-        pizza = chicagoStore.orderPizza("cheese");
+        pizza = store.orderPizza("onion");
         System.out.println("Flor ordered a " + pizza.getName() + "\n");
-
-        pizza = nyStore.orderPizza("veggie");
-        System.out.println("Yoni ordered a " + pizza.getName() + "\n");
 
     }
 }
